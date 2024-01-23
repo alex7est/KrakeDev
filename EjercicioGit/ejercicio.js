@@ -1,3 +1,5 @@
 function saludar(){
-    console.log("hola")
+    let cmpGif = document.getElementById("gifSaludo");
+    cmpGif.src = "imagenes/NhphEi.gif"
+    console.log("hola");
 }
