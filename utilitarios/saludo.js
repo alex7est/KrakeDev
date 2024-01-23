@@ -5,21 +5,28 @@ function recuperarTexto(idComponente){
     valorIngresado=componente.value;
     return valorIngresado;
 }
+function recuperarInt(idComponente){
+    let valorCaja = recuperarTexto(idComponente);
+    let valorEntero = parseInt(valorCaja);
+    return valorEntero;
+}
+ function recuperarFloat(idComponente){
+    let valorCaja = recuperarTexto(idComponente);
+    let valorFloat = parseFloat(valorCaja);
+    return valorFloat;
+}
+function mostrarTexto(idComponente, mensaje) {
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente. innerText = mensaje;
+}
 
 function saludar(){
     let nombre = recuperarTexto("txtNombre");
     let apellido = recuperarTexto("txtApellido");
     let edad = recuperarInt("txtEdad");
-    let estatura = recuperarFloat("txtEstatura")
+    let estatura = recuperarFloat("txtEstatura");
+    let mensajeBienveniada = "Bienvenido "+nombre+" "+apellido;
+    mostrarTexto("lblResultado",mensajeBienveniada)
 }
 
-function recuperarInt(idComponente){
-    let valorCaja = recuperarTexto(idComponente);
-    let valorEntero = parseInt(valorCaja);
-    return valorEntero;
- }
- function recuperarFloat(idComponente){
-    let valorCaja = recuperarTexto(idComponente);
-    let valorFloat = parseFloat(valorCaja);
-    return valorFloat;
- }
