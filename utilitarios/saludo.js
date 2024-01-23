@@ -25,6 +25,11 @@ function mostrarImagen(idComponente, rutaImagen){
     componente = document.getElementById(idComponente) ;
     componente.src = rutaImagen;
 }
+function mostrarTextoEnCaja(idComponente, mensaje) {
+    let componente;
+    componente=document.getElementById(idComponente) ;
+    componente.value = mensaje;
+}
 
 function saludar(){
     let nombre = recuperarTexto("txtNombre");
@@ -33,5 +38,6 @@ function saludar(){
     let estatura = recuperarFloat("txtEstatura");
     let mensajeBienveniada = "Bienvenido "+nombre+" "+apellido;
     mostrarTexto("lblResultado",mensajeBienveniada);
-    mostrarImagen("imgSaludo","imagenes/hola-pocoyo.gif")
+    mostrarImagen("imgSaludo","imagenes/hola-pocoyo.gif");
+    mostrarTextoEnCaja("txtNombre","");
 }
