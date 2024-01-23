@@ -1,8 +1,8 @@
 function recuperarTexto(idComponente){
     let componente;
     let valorIngresado;
-    componente=document.getElementById(idComponente);
-    valorIngresado=componente.value;
+    componente = document.getElementById(idComponente);
+    valorIngresado = componente.value;
     return valorIngresado;
 }
 function recuperarInt(idComponente){
@@ -17,8 +17,13 @@ function recuperarInt(idComponente){
 }
 function mostrarTexto(idComponente, mensaje) {
     let componente;
-    componente=document.getElementById(idComponente);
+    componente = document.getElementById(idComponente);
     componente. innerText = mensaje;
+}
+function mostrarImagen(idComponente, rutaImagen){
+    let componente;
+    componente = document.getElementById(idComponente) ;
+    componente.src = rutaImagen;
 }
 
 function saludar(){
@@ -27,6 +32,6 @@ function saludar(){
     let edad = recuperarInt("txtEdad");
     let estatura = recuperarFloat("txtEstatura");
     let mensajeBienveniada = "Bienvenido "+nombre+" "+apellido;
-    mostrarTexto("lblResultado",mensajeBienveniada)
+    mostrarTexto("lblResultado",mensajeBienveniada);
+    mostrarImagen("imgSaludo","imagenes/hola-pocoyo.gif")
 }
-
