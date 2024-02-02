@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placas</title>
+    <script src="placas.js"></script>
+    <script src="serviciosPlacas.js"></script>
+    <script src="utilitarios.js"></script>
+    <script src="utilitariosCadenas.js"></script>
+    <link rel="stylesheet" href="placas.css">
+</head>
+<body>
+    <div class="contenido">        
+        <div class="titulo">
+            INGRESE LA PLACA
+        </div>
+        <div class="input">
+            <input type="text" id="txtPlaca">
+            <input type="button" value="VALIDAR" onclick="validarPlaca()">
+        </div>
+        <div class="texto">
+            <div id="lblValidez"></div>
+            <div id="lblErrores"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #20a3f4 18%, #1ed594 89%);
+}
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f8ff7a;
+    width: 100%;
+    height: 40%;
+}
+.titulo{
+    font-size: large;
+    font-weight: bold;
+    padding-top: 40px;
+    height: 10%;
+}
+.input{
+    height: 10%;
+}
+#lblValidez{
+    text-align: center;
+}
+.texto{
+    line-height: 25px;
+    height: 70%;
+}
