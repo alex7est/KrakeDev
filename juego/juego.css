@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+img {
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#imagenComputadora {
+    margin-top: 20px;
+}
