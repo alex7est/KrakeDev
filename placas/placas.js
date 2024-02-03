@@ -4,6 +4,7 @@ function validarPlaca(){
     if(erroresEstructura == null){
         let provincia = obtenerProvincia(placa);
         let tipo = obtenerTipoVehiculo(placa);
+        let dia = obtenerDiaPicoYPlaca(placa);
         mostrarTexto("lblValidez","ESTRUCTURA VALIDA");
         mostrarTexto("lblErrores","")
         if(provincia != null){
@@ -12,10 +13,12 @@ function validarPlaca(){
             mostrarTexto("lblProvincia","PROVINCIA INCORRECTA")
         }
         mostrarTexto("lblTipo",tipo);
+        mostrarTexto("lblPicoYPlaca","Dia de pico y placa: "+dia)
     }else{
         mostrarTexto("lblValidez","ESTRUCTURA INCORRECTA");
         mostrarTexto("lblErrores",erroresEstructura);
         mostrarTexto("lblProvincia","")
         mostrarTexto("lblTipo","")
+        mostrarTexto("lblPicoYPlaca","");
     }
 }

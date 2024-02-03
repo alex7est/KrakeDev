@@ -113,3 +113,22 @@ function obtenerTipoVehiculo(placa){
 //A todas las letras les corresponde un tipo, por tanto, no hace falta retornar null
     return tipo;
 }
+
+function obtenerDiaPicoYPlaca(placa){
+    let numero = placa.charAt(placa.length-1);
+    let dia;
+    
+    if (numero == "1" || numero == "2") {
+        dia = "Lunes";
+    } else if (numero == "3" || numero == "4") {
+        dia = "Martes";
+    } else if (numero == "5" || numero == "6") {
+        dia = "Miercoles";
+    } else if (numero == "7" || numero == "8") {
+        dia = "Jueves";
+    } else if (numero == "9" || numero == "0") {
+        dia = "Viernes";
+    }
+
+    return dia;
+}
