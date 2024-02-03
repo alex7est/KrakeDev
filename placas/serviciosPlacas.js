@@ -41,55 +41,75 @@ function obtenerProvincia(placa){
     let provincia;
     
     if (letra == "A") {
-      provincia = "Azuay";
+        provincia = "Azuay";
     } else if (letra == "B") {
-      provincia = "Bolívar";
+        provincia = "Bolívar";
     } else if (letra == "U") {
-      provincia = "Cañar";
+        provincia = "Cañar";
     } else if (letra == "C") {
-      provincia = "Carchi";
+        provincia = "Carchi";
     } else if (letra == "X") {
-      provincia = "Cotopaxi";
+        provincia = "Cotopaxi";
     } else if (letra == "H") {
-      provincia = "Chimborazo";
+        provincia = "Chimborazo";
     } else if (letra == "O") {
-      provincia = "El Oro";
+        provincia = "El Oro";
     } else if (letra == "E") {
-      provincia = "Esmeraldas";
+        provincia = "Esmeraldas";
     } else if (letra == "W") {
-      provincia = "Galápagos";
+        provincia = "Galápagos";
     } else if (letra == "G") {
-      provincia = "Guayas";
+        provincia = "Guayas";
     } else if (letra == "I") {
-      provincia = "Imbabura";
+        provincia = "Imbabura";
     } else if (letra == "L") {
-      provincia = "Loja";
+        provincia = "Loja";
     } else if (letra == "R") {
-      provincia = "Los Ríos";
+        provincia = "Los Ríos";
     } else if (letra == "M") {
-      provincia = "Manabí";
+        provincia = "Manabí";
     } else if (letra == "V") {
-      provincia = "Morona Santiago";
+        provincia = "Morona Santiago";
     } else if (letra == "N") {
-      provincia = "Napo";
+        provincia = "Napo";
     } else if (letra == "S") {
-      provincia = "Pastaza";
+        provincia = "Pastaza";
     } else if (letra == "P") {
-      provincia = "Pichincha";
+        provincia = "Pichincha";
     } else if (letra == "K") {
-      provincia = "Sucumbíos";
+        provincia = "Sucumbíos";
     } else if (letra == "Q") {
-      provincia = "Orellana";
+        provincia = "Orellana";
     } else if (letra == "T") {
-      provincia = "Tungurahua";
+        provincia = "Tungurahua";
     } else if (letra == "Z") {
-      provincia = "Zamora Chinchipe";
+        provincia = "Zamora Chinchipe";
     } else if (letra == "Y") {
-      provincia = "Santa Elena";
+        provincia = "Santa Elena";
     } else {
-      provincia = null;
+        provincia = null;
     }
     
     return provincia;
 }
   
+function obtenerTipoVehiculo(placa){
+    let letra = placa.charAt(1);
+    let tipo;
+    
+    if (letra == "A" || letra == "Z") {
+        tipo = "Vehiculo comercial";
+    } else if (letra == "E") {
+        tipo = "Vehiculo gubernamental";
+    } else if (letra == "X") {
+        tipo = "Vehiculo de uso oficial";
+    } else if (letra == "S") {
+        tipo = "Vehiculo del gobierno provincial";
+    } else if (letra == "M") {
+        tipo = "Vehiculo municipal";
+    } else {
+        tipo = "Vehiculo particular";
+    }
+//A todas las letras les corresponde un tipo, por tanto, no hace falta retornar null
+    return tipo;
+}
