@@ -14,6 +14,12 @@ img {
     cursor: pointer;
 }
 
-#imagenComputadora {
+#lblResultado {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+#lblFinJuego {
     margin-top: 20px;
+    margin-bottom: 20px;
 }

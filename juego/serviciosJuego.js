@@ -42,19 +42,3 @@ function generarRuta(nombre){
     let ruta = "imagenes/"+nombre+".png"
     return ruta;
 }
-
-function jugar(seleccionado) {
-    let eleccionComputadora = generarElemento();
-    let rutaImagenComputadora = generarRuta(eleccionComputadora);
-    let resultado = determinarGanador(seleccionado, eleccionComputadora);    
-    
-    mostrarImagen("imgComputadora",rutaImagenComputadora);
-
-    if (resultado == 0) {
-        mostrarTexto("lblResultado","EMPATE");
-    } else if (resultado == 1) {
-        mostrarTexto("lblResultado","GANASTE LA PARTIDA!!");
-    } else if (resultado == 2) {
-        mostrarTexto("lblResultado","PERDISTE LA PARTIDA!!");
-    }
-}
