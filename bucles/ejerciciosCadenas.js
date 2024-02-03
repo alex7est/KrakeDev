@@ -32,3 +32,29 @@ ejecutarPrueba2 = function(){
     let cadenaInvertida = invertirCadena(cadena);
     mostrarTexto("lblInvertida",cadenaInvertida);
 }
+
+buscarLetra = function(cadena,letra){
+    let letralterada;
+    let existeletra=false;
+    
+    for(let i=0;i<cadena.length;i++){
+        letralterada=cadena.charAt(i);
+        if(letraTterada==letra){
+            existeletra=true;
+        }
+    }
+
+    return existeletra;
+}
+
+contarMayusculas = function(cadena){
+    let letra;
+    let contadorMayusculas=0; 
+    for(let i=0;i<cadena.length;i++){
+        letra=cadena.charAt(i); 
+        if(esMayuscula(letra)){
+            contadorMayusculas++;
+        }
+    }
+    console.log(contadorMayusculas)
+}
