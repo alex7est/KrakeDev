@@ -22,3 +22,12 @@ function validarPlaca(){
         mostrarTexto("lblPicoYPlaca","");
     }
 }
+
+function limpiar(){
+    mostrarTexto("lblValidez","");
+    mostrarTexto("lblErrores","");
+    mostrarTexto("lblProvincia","")
+    mostrarTexto("lblTipo","")
+    mostrarTexto("lblPicoYPlaca","");
+    mostrarTextoEnCaja("txtPlaca","")
+}
