@@ -44,6 +44,7 @@ function validar(letra){
     if(letrasEncontradas == 0){
         alert("LA LETRA NO ES PARTE DE LA PALABRA")
         errores++;
+        mostrarAhorcado();
     }
 }
 
@@ -60,4 +61,8 @@ function ingresarLetra(){
     }else{
         alert("SOLO SE ACEPTAN MAYUSCULAS")
     }
+}
+
+function mostrarAhorcado(){
+    mostrarImagen("ahorcadoImagen","Ahorcado_0"+errores+".png")
 }
