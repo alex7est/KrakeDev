@@ -54,9 +54,9 @@ function ingresarLetra(){
         validar(letra);
         intentos++;
         if(coincidencias==5){
-            alert("HA GANADO")
+            mostrarImagen("ahorcadoImagen","ganador.gif")
         }else if(intentos==10){
-            alert("HA PERDIDO")
+            mostrarImagen("ahorcadoImagen","gameOver.gif")
         }
     }else{
         alert("SOLO SE ACEPTAN MAYUSCULAS")
