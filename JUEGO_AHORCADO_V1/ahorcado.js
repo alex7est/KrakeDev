@@ -28,3 +28,13 @@ function guardarPalabra(){
 function mostrarLetra(letra, posicion){
     mostrarTexto("div"+posicion,letra)
 }
+
+function validar(letra){
+    let letrasEncontradas = 0;
+    for(let i=0;i<5;i++){
+        if(palabraSecerta.charAt(i) == letra){
+            mostrarLetra(letra,i);
+            letrasEncontradas++;
+        }
+    }
+}
