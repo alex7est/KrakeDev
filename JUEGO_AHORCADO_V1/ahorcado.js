@@ -38,3 +38,12 @@ function validar(letra){
         }
     }
 }
+
+function ingresarLetra(){
+    let letra = recuperarTexto("txtLetra");
+    if(esMayuscula(letra)){
+        validar(letra);
+    }else{
+        alert("SOLO SE ACEPTAN MAYUSCULAS")
+    }
+}
