@@ -24,3 +24,7 @@ function guardarPalabra(){
         console.log(palabraSecerta);
     }
 }
+
+function mostrarLetra(letra, posicion){
+    mostrarTexto("div"+posicion,letra)
+}
