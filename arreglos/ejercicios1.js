@@ -23,3 +23,18 @@ recorrerArreglo=function(){
         console.log(notaR); 
     }
 }
+
+calcularPromedio = function(){
+    let sumaNotas = 0;
+    let promedio;
+    for(let i=0;i<notas.length;i++){
+        sumaNotas += notas[i];
+    }
+    promedio = sumaNotas/notas.length;
+    return promedio;
+}
+
+ejecutarPromedio = function(){
+    promedio = calcularPromedio().toFixed(2);
+    mostrarTexto("lblPromedio",promedio);
+}
