@@ -3,6 +3,7 @@ let empleados = [
     {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:900.0},
     {cedula:"0112345678",nombre:"María",apellido:"Martínez",sueldo: 700.0}
 ]
+let roles = [];
 let esNuevo = false;
 
 function mostrarOpcionEmpleado(){
@@ -17,6 +18,7 @@ function mostrarOpcionRol(){
     mostrarComponente("divRol");
     ocultarComponente("divEmpleado");
     ocultarComponente("divResumen");
+    deshabilitarComponente("btnGuardarRol");
 }
 
 function mostrarOpcionResumen(){
@@ -222,8 +224,10 @@ function calcularRol(){
     }
     if(errorDescuento){
         mostrarTexto("lblErrorDescuentos","Una cantidad entre 0.00 y "+sueldo);
+        deshabilitarComponente("btnGuardarRol");
     }else{
         mostrarTexto("lblErrorDescuentos","");
+        habilitarComponente("btnGuardarRol");
     }
 
     let aporte = calcularAporteEmpleado(sueldo);
@@ -231,4 +235,51 @@ function calcularRol(){
 
     let pago = calcularValorAPagar(sueldo,aporte,descuento);
     mostrarTexto("infoPago",pago);
+}
+
+function buscarRol(cedula){
+    let rol;
+    let rolEncontrado=null;
+    for (let i=0;i<roles.length;i++){
+        rol=roles[i];
+        if(rol.cedula == cedula){
+            rolEncontrado=rol;
+            break;
+        }
+    }
+    return rolEncontrado;
+}
+
+function agregarRol(rol){
+    let resultado = buscarRol(rol.cedula); 
+    if(resultado==null){ 
+        roles.push(rol);
+        alert("ROL AGREGADO CORRECTAMENTE");
+    }else{ 
+        alert("YA EXISTE UN ROL CON CEDULA: "+rol.cedula);
+    }
+}
+
+function calcularAporteEmpleador(sueldo){
+    return sueldo*0.1115;
+}
+
+function guardarRol(){
+    let cedula = recuperarTextoDiv("infoCedula");
+    let nombre = recuperarTextoDiv("infoNombre");
+    let sueldo = recuperarFloatDiv("infoSueldo");
+    let valorAPagar = recuperarFloatDiv("infoPago");
+    let aporteEmpleado = recuperarFloatDiv("infoIESS");
+    let aporteEmpleador = calcularAporteEmpleador(sueldo);
+
+    let rol = {}
+    rol.cedula = cedula;
+    rol.nombre = nombre;
+    rol.sueldo = sueldo;
+    rol.valorAPagar = valorAPagar;
+    rol.aporteEmpleado = aporteEmpleado;
+    rol.aporteEmpleador = aporteEmpleador;
+
+    agregarRol(rol);
+    alert("ROL GUARDADO CORRECTAMENTE")
 }
