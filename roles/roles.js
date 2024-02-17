@@ -191,3 +191,16 @@ function limpiar(){
     deshabilitarCmpsEmpleado();
     esNuevo=false;
 }
+
+function buscarPorRol(){
+    let cedula = recuperarTexto("txtBusquedaCedulaRol");
+    let empleado = buscarEmpleado(cedula);
+
+    if(empleado==null){
+        alert("EMPLEADO NO EXISTE");
+    }else{
+        mostrarTexto("infoCedula",empleado.cedula);
+        mostrarTexto("infoNombre",empleado.nombre+" "+empleado.apellido);
+        mostrarTexto("infoSueldo",empleado.sueldo);
+    }
+}
