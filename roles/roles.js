@@ -310,7 +310,10 @@ function mostrarTotales(){
         totalAPagar+=roles[i].valorAPagar;
     }
 
-    mostrarTexto("infoTotalPago",totalAPagar);
-    mostrarTexto("infoAporteEmpresa",totalEmpleador);
-    mostrarTexto("infoAporteEmpleado",totalEmpleado);
+    mostrarTexto("infoTotalPago",totalAPagar.toFixed(2));
+    mostrarTexto("infoAporteEmpresa",totalEmpleador.toFixed(2));
+    mostrarTexto("infoAporteEmpleado",totalEmpleado.toFixed(2));
+
+    let totalNomina = totalAPagar+totalEmpleado+totalEmpleador;
+    mostrarTexto("infoTotalNomina",totalNomina.toFixed(2));
 }
