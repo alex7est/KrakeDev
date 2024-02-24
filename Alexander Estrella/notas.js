@@ -16,16 +16,33 @@ function calcularPromedio(p1,p2,p3){
 }
 
 function calcular(){
+    let error = false;
     let nota1 = recuperarFloat("txtNota1")
     let nota2 = recuperarFloat("txtNota2")
     let nota3 = recuperarFloat("txtNota3")
+    let nombre = recuperarTexto("txtNombre")
+    let msgError = ""
+
+    if(nombre==""){
+        msgError = "Campo Obligatorio"
+        error = true
+    }else if(nombre.length < 10){
+        msgError = "El nombre debe tener almenos 10 caracteres"
+        error = true
+    }
 
     let total = calcularTotal(nota1,nota2,nota3)
     mostrarTexto("lblTotal",total.toFixed(2))
     
     let promedio = calcularPromedio(nota1,nota2,nota3)
     mostrarTexto("lblPromedio",promedio.toFixed(2))
-    habilitarComponente("btnGuardar")
+    if(error == false){
+        habilitarComponente("btnGuardar")
+        mostrarTexto("error","")
+    }else{
+        mostrarTexto("error",msgError)
+        deshabilitarComponente("btnGuardar")
+    }
 }
 
 function guardar(){
