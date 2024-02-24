@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="notas.css">
+    <script src="notas.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+<body onload="mostrarEstudiantes()">
+    <img src="notas.png">
+    <div class="principal">
+        <div class="datos">
+            <div class="dato">
+                <div class="nombreDato">
+                    NOMBRE
+                </div>
+                <div class="ingresoDato">
+                    <input type="text" class="cajaTexto" id="txtNombre">
+                </div>
+            </div>
+            <div class="dato">
+                <div class="nombreDato">
+                    APELLIDO
+                </div>
+                <div class="ingresoDato">
+                    <input type="text" class="cajaTexto" id="txtApellido">
+                </div>
+            </div>
+            <div class="dato">
+                <div class="nombreDato">
+                    NOTA 1
+                </div>
+                <div class="ingresoDato">
+                    <input type="text" class="cajaTexto" id="txtNota1">
+                </div>
+            </div>
+            <div class="dato">
+                <div class="nombreDato">
+                    NOTA 2
+                </div>
+                <div class="ingresoDato">
+                    <input type="text" class="cajaTexto" id="txtNota2">
+                </div>
+            </div>
+            <div class="dato">
+                <div class="nombreDato">
+                    NOTA 3
+                </div>
+                <div class="ingresoDato">
+                    <input type="text" class="cajaTexto" id="txtNota3">
+                </div>
+            </div>
+            <input type="button" value="CALCULAR" class="estiloBoton" onclick="calcular()">
+            <input type="button" value="GUARDAR" class="estiloBoton" onclick="guardar()" id="btnGuardar">
+        </div>
+        <div class="info">
+            <div class="dato">
+                <div class="nombreDato">
+                    TOTAL
+                </div>
+                <div id="lblTotal"></div>
+            </div>
+            <div class="dato">
+                <div class="nombreDato">
+                    PROMEDIO
+                </div>
+                <div id="lblPromedio"></div>
+            </div>
+        </div>
+        <div>
+            <div id="tabla" class="areaTabla">
+                
+            </div>
+            Autor: Alexander Estrella
+        </div>
+    </div>
+    
+</body>
+</html>
